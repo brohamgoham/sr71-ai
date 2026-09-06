@@ -8,6 +8,7 @@ use ratatui::{
     text::{Line, Span},
     widgets::{Block, BorderType, Borders, Clear, Paragraph},
 };
+use unicode_segmentation::UnicodeSegmentation;
 use unicode_width::UnicodeWidthStr;
 
 use crate::{
@@ -184,7 +185,16 @@ fn status(frame: &mut Frame<'_>, app: &App, theme: Theme, area: Rect) {
     let ratio = app.playhead / app.fixture.duration_seconds as f64;
     let available = usize::from(area.width).saturating_sub(2);
     let filled = ((available as f64 * ratio) as usize).min(available);
-    let timeline = format!("{}{}", "━".repeat(filled), "─".repeat(available - filled));
+    let (filled_symbol, empty_symbol) = if theme.border == BorderType::Plain {
+        ("=", "-")
+    } else {
+        ("━", "─")
+    };
+    let timeline = format!(
+        "{}{}",
+        filled_symbol.repeat(filled),
+        empty_symbol.repeat(available - filled)
+    );
     let line = format!(
         "{mode}  {:02}:{:02} / {:02}:{:02}  {:.1}x  · {connection} · {} buffered{end}",
         at / 60,
@@ -294,14 +304,11 @@ pub fn wrapped(input: &str, width: usize) -> Vec<String> {
             if !line.is_empty() {
                 line.push(' ');
             }
-            for ch in word.chars() {
-                if !line.is_empty()
-                    && line.width() + unicode_width::UnicodeWidthChar::width(ch).unwrap_or(0)
-                        > width
-                {
+            for grapheme in word.graphemes(true) {
+                if !line.is_empty() && line.width() + grapheme.width() > width {
                     lines.push(std::mem::take(&mut line));
                 }
-                line.push(ch);
+                line.push_str(grapheme);
             }
         }
         lines.push(line);

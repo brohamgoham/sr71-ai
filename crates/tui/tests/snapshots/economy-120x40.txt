@@ -1,0 +1,40 @@
+
+ THE SQUARE  /  DEMO   epoch 02                                                        1 WATCH  2 CAST  3 ECONOMY
+ A little room to move                                                                Fictional · no chain / API
+
+ ╭ THE ECONOMY ───────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │  TOTAL WEALTH   1240.2 SUI                                                                                         │
+ │  3 gifts    Gini 0.752    largest wallet 40.3%                                                                     │
+ │  Admin floor support +0.0 SUI · initial funding excluded                                                           │
+ │  An open economy: gifts redistribute; top-ups add wealth.                                                          │
+ │  DEMO accounting only · no gas spent or on-chain activity                                                          │
+ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ ╭ WHO GAVE TO WHOM ────────────────────────────────────────────╮ ╭ MOMENTS · source-backed ──────────────────────────╮
+ │ Blythe → Rook  40.0 SUI / 1 gifts                            │ │ Marlow entered low income source demo-0027        │
+ │ Dunn → Rook  14.9 SUI / 1 gifts                              │ │ First gift between this pair: Rook to Marlow · 3.0│
+ │ Rook → Marlow  3.0 SUI / 1 gifts                             │ │SUI source demo-0027                               │
+ │                                                              │ │ Rook entered middle class source demo-0023        │
+ │                                                              │ │ Largest gift so far: Blythe to Rook · 40.0 SUI    │
+ │                                                              │ │source demo-0023                                   │
+ │                                                              │ │ Rook entered low income source demo-0012          │
+ │                                                              │ │ First gift: Dunn to Rook · 14.9 SUI source        │
+ │                                                              │ │demo-0012                                          │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ │                                                              │ │                                                   │
+ ╰──────────────────────────────────────────────────────────────╯ ╰───────────────────────────────────────────────────╯
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━────────────────────────────────────────────────────────────────────────────────────
+ PLAYING DEMO  02:47 / 10:00  1.0x  · signal current · 0 buffered
+ 1/2/3 views  ↑↓ cast  f follow  ↵ inspect  space pause  r replay  ? keys  q quit
+

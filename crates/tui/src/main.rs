@@ -147,14 +147,25 @@ fn logging() -> Result<()> {
         .map_err(|error| anyhow::anyhow!("cannot initialize file logging: {error}"))
 }
 
+#[derive(Clone, Copy, Eq, PartialEq)]
+enum Redraw {
+    Needed,
+    Idle,
+}
+
 fn run(terminal: &mut ratatui::DefaultTerminal, app: &mut App, theme: Theme) -> Result<()> {
     let mut previous = Instant::now();
+    let mut redraw = Redraw::Needed;
     loop {
-        terminal
-            .draw(|frame| ui::render(frame, app, theme))
-            .context("cannot render viewer; check terminal connection")?;
-        if event::poll(Duration::from_millis(100)).context("cannot poll terminal input")? {
+        if redraw == Redraw::Needed {
+            terminal
+                .draw(|frame| ui::render(frame, app, theme))
+                .context("cannot render viewer; check terminal connection")?;
+        }
+        redraw = Redraw::Idle;
+        if event::poll(Duration::from_millis(50)).context("cannot poll terminal input")? {
             let input = event::read().context("cannot read terminal input")?;
+            redraw = Redraw::Needed;
             if let Event::Key(key) = input
                 && key.kind == KeyEventKind::Press
                 && controls::key(app, key)? == Control::Quit
@@ -163,7 +174,11 @@ fn run(terminal: &mut ratatui::DefaultTerminal, app: &mut App, theme: Theme) -> 
             }
         }
         let now = Instant::now();
+        let before = (app.playhead as u64, app.backlog());
         app.tick(now.duration_since(previous).as_secs_f64())?;
+        if before != (app.playhead as u64, app.backlog()) {
+            redraw = Redraw::Needed;
+        }
         previous = now;
     }
     tracing::info!("viewer exited; no simulation was stopped");

@@ -6,7 +6,7 @@ use ratatui::{
     widgets::{Cell, Paragraph, Row, Sparkline, Table},
 };
 
-use super::{CYAN, GOLD, MUTED, PAPER, Theme, safe, wrapped};
+use super::{CYAN, GOLD, MUTED, Motion, PAPER, Theme, safe, wrapped};
 use crate::{
     app::App,
     model::{DecisionNote, LifeState, ObserverInput},
@@ -35,7 +35,13 @@ pub fn cast_list(frame: &mut Frame<'_>, app: &App, theme: Theme, area: Rect) {
             Row::new([
                 format!("{prefix} {}", agent.resident.name),
                 agent.balance.to_string(),
-                agent.activity.label().to_owned(),
+                if agent.activity == crate::model::Activity::Deciding
+                    && theme.motion == Motion::Subtle
+                {
+                    format!("deciding{}", ".".repeat(app.playhead as usize % 3))
+                } else {
+                    agent.activity.label().to_owned()
+                },
             ])
             .style(style)
         })

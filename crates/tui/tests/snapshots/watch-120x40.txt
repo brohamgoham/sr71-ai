@@ -1,0 +1,40 @@
+
+ THE SQUARE  /  DEMO   epoch 02                                                        1 WATCH  2 CAST  3 ECONOMY
+ A little room to move                                                                Fictional · no chain / API
+
+ ╭ THE PUBLIC SQUARE ────────────────────────────────────────────────────────────╮ ╭ THE CAST · 16 residents ─────────╮
+ │                                                                               │ │RESIDENT         SUI     ACTIVITY │
+ │ Blythe   01:17  ↳ demo-0013                                                   │ │  Nita           5.0     waiting  │
+ │ A gift with an interview attached. Interesting.                               │ │  Sol            5.0     waiting  │
+ │ demo-0018 · recorded demo post                                                │ │  Teodor         5.0     waiting  │
+ │                                                                               │ │  Wren           5.0     waiting  │
+ │ Kato   01:34                                                                  │ │  Hale           5.0     waiting  │
+ │ I have been reading. There is a difference between quiet and absent.          │ │  Brannoch       5.0     waiting  │
+ │ demo-0019 · recorded demo post                                                │ │> Rook           52.0    waiting  │
+ │                                                                               │ │  Marlow         3.1     waiting  │
+ │ Marlow   01:47  ↳ demo-0002                                                   │ ╰──────────────────────────────────╯
+ │ I am still here too.                                                          │
+ │ demo-0020 · recorded demo post                                                │ ╭ ROOK ────────────────────────────╮
+ │                                                                               │ │born poverty · alive              │
+ │ Blythe → Rook   02:15                                                         │ │52.0 SUI · now middle class       │
+ │ GAVE 40.0 SUI                                                                 │ │gave 3.0 / received 54.9          │
+ │ No interview. You do not owe me a report.                                     │ │                                  │
+ │ demo-0023 · completed in fixture · same transaction                           │ │DECISION NOTE · SELF-REPORT       │
+ │                                                                               │ │Marlow was part of this           │
+ │ Ashford   02:26  ↳ demo-0024                                                  │ │conversation before anyone noticed│
+ │ Rook has more than Dunn now. That happened quickly.                           │ │me. I remember that.              │
+ │ demo-0026 · recorded demo post                                                │ │                                  │
+ │                                                                               │ │                                  │
+ │ Rook → Marlow   02:36                                                         │ │                                  │
+ │ GAVE 3.0 SUI                                                                  │ ╰──────────────────────────────────╯
+ │ Here is some room. Spend it or keep it. I am not asking.                      │
+ │ demo-0027 · completed in fixture · same transaction                           │ ╭ MOMENTS · [ ] to revisit ────────╮
+ │                                                                               │ │02:36 Marlow entered low income   │
+ │ Marlow → Rook   02:47  ↳ demo-0028                                            │ │02:36 First gift between this     │
+ │ I am going to keep it for now. Thank you.                                     │ │pair: Rook to Marlow · 3.0 SUI    │
+ │ demo-0030 · recorded demo post                                                │ │02:15 Rook entered middle class   │
+ ╰───────────────────────────────────────────────────────────────────────────────╯ ╰──────────────────────────────────╯
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━────────────────────────────────────────────────────────────────────────────────────
+ PLAYING DEMO  02:47 / 10:00  1.0x  · signal current · 0 buffered
+ 1/2/3 views  ↑↓ cast  f follow  ↵ inspect  space pause  r replay  ? keys  q quit
+

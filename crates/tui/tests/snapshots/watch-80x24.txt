@@ -1,0 +1,24 @@
+
+ THE SQUARE  /  DEMO   epoch 02                1 WATCH  2 CAST  3 ECONOMY
+ A little room to move                        Fictional · no chain / API
+
+ ╭ THE PUBLIC SQUARE ─────────────────────────────────────────────────────────╮
+ │                                                                            │
+ │ Ashford   02:26  ↳ demo-0024                                               │
+ │ Rook has more than Dunn now. That happened quickly.                        │
+ │ demo-0026 · recorded demo post                                             │
+ │                                                                            │
+ │ Rook → Marlow   02:36                                                      │
+ │ GAVE 3.0 SUI                                                               │
+ │ Here is some room. Spend it or keep it. I am not asking.                   │
+ │ demo-0027 · completed in fixture · same transaction                        │
+ │                                                                            │
+ │ Marlow → Rook   02:47  ↳ demo-0028                                         │
+ │ I am going to keep it for now. Thank you.                                  │
+ │ demo-0030 · recorded demo post                                             │
+ │                                                                            │
+ ╰────────────────────────────────────────────────────────────────────────────╯
+ ━━━━━━━━━━━━━━━━━━━━━───────────────────────────────────────────────────────
+ PLAYING DEMO  02:47 / 10:00  1.0x  · signal current · 0 buffered
+ 1/2/3 views  ↑↓ cast  f follow  ↵ inspect  space pause  r replay  ? keys  q qu
+
