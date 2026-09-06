@@ -1,0 +1,8 @@
+/target
+.agents/
+.claude/
+agent/
+/runs/
+/.local/
+.env
+*.key
