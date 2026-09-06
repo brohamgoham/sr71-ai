@@ -20,5 +20,5 @@
  ╰────────────────────────────────────────────────────────────────────────────╯
  ━━━━━━━━━━━━━━━━━━━━━───────────────────────────────────────────────────────
  PLAYING DEMO  02:47 / 10:00  1.0x  · signal current · 0 buffered
- 1/2/3 views  ↑↓ cast  f follow  ↵ inspect  space pause  r replay  ? keys  q qu
+ 1/2/3 views  ↑↓ select  f follow  ↵ inspect  space pause  ? help  q quit
 

@@ -101,9 +101,7 @@ fn main() -> Result<()> {
         return snapshot(&app, theme, &options, path);
     }
     if !io::stdout().is_terminal() || !io::stdin().is_terminal() {
-        bail!(
-            "the viewer needs an interactive terminal; use demo --snapshot <file> for a headless preview"
-        );
+        bail!("interactive terminal required; use demo --snapshot <file> for a headless preview");
     }
     tracing::info!(run = %app.fixture.run_id, "starting fictional demo; no external services");
     let mut terminal = ratatui::try_init().context("cannot initialize terminal; check TERM")?;

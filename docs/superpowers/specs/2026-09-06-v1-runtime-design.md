@@ -6,7 +6,7 @@ Completes Phase 2–3 and supplies shared contracts for Phase 4–6.
 Read alongside [the original design](2026-09-06-phases-0-3-design.md) and
 [its product/contract revision](2026-09-06-product-and-contract-revision.md).
 
-## New choices to review
+## Approved v1 choices
 
 1. One guaranteed base turn and up to one reactive turn per agent per Square epoch
    by default. Events can schedule bounded reactions. Epoch zero is setup; 1..N are rounds.

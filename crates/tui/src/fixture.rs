@@ -4,7 +4,7 @@ use thiserror::Error;
 use world::Mist;
 
 use crate::{
-    model::{AgentId, Fixture},
+    model::Fixture,
     observer::{ObserveError, ObservedWorld},
 };
 
@@ -100,9 +100,6 @@ pub fn validate(fixture: &Fixture) -> Result<(), FixtureError> {
             return invalid("event IDs must be unique/nonempty and timestamps within duration");
         }
         world.apply(event)?;
-    }
-    if world.agent(AgentId(0)).is_none() {
-        return invalid("missing first resident");
     }
     Ok(())
 }

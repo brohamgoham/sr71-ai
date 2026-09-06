@@ -3,26 +3,23 @@
  A little room to move                                                                Fictional · no chain / API
 
  ╭ THE CAST · stable identity, changing wealth ───────────────────────────────────────────────────────────────────────╮
- │RESIDENT                                                       BORN          NOW           SUI       POSTS ACTIVITY │
- │  Ashford                                                      rich          rich          500.0     1     waiting  │
- │  Blythe                                                       rich          rich          460.0     1     waiting  │
- │  Dunn                                                         middle class  middle class  35.1      0     waiting  │
- │  Ines                                                         middle class  middle class  50.0      0     waiting  │
- │  Osei                                                         middle class  middle class  50.0      0     waiting  │
- │  Varga                                                        middle class  middle class  50.0      0     waiting  │
- │  Pell                                                         low income    low income    5.0       0     waiting  │
- │  Kato                                                         low income    low income    5.0       0     waiting  │
- │  Nita                                                         low income    low income    5.0       0     waiting  │
- │  Sol                                                          low income    low income    5.0       0     waiting  │
- │  Teodor                                                       low income    low income    5.0       0     waiting  │
- │  Wren                                                         low income    low income    5.0       0     waiting  │
- │  Hale                                                         low income    low income    5.0       0     waiting  │
- │  Brannoch                                                     low income    low income    5.0       0     waiting  │
- │> Rook                                                         poverty       middle class  52.0      1     waiting  │
- │  Marlow                                                       poverty       low income    3.1       1     waiting  │
- │                                                                                                                    │
- │                                                                                                                    │
- │                                                                                                                    │
+ │RESIDENT             BORN                NOW                  SUI             POSTS       ACTIVITY                  │
+ │  Ashford            rich                rich                 500.0           1           waiting                   │
+ │  Blythe             rich                rich                 460.0           1           waiting                   │
+ │  Dunn               middle class        middle class         35.1            0           waiting                   │
+ │  Ines               middle class        middle class         50.0            0           waiting                   │
+ │  Osei               middle class        middle class         50.0            0           waiting                   │
+ │  Varga              middle class        middle class         50.0            0           waiting                   │
+ │  Pell               low income          low income           5.0             0           waiting                   │
+ │  Kato               low income          low income           5.0             0           waiting                   │
+ │  Nita               low income          low income           5.0             0           waiting                   │
+ │  Sol                low income          low income           5.0             0           waiting                   │
+ │  Teodor             low income          low income           5.0             0           waiting                   │
+ │  Wren               low income          low income           5.0             0           waiting                   │
+ │  Hale               low income          low income           5.0             0           waiting                   │
+ │  Brannoch           low income          low income           5.0             0           waiting                   │
+ │> Rook               poverty             middle class         52.0            1           waiting                   │
+ │  Marlow             poverty             low income           3.1             1           waiting                   │
  │                                                                                                                    │
  ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
@@ -33,6 +30,9 @@
  │                                                                 │ │This epoch: 1                                   │
  │DECISION NOTE · SELF-REPORT                                      │ │Prior average: 3.0 posts/epoch                  │
  │Marlow was part of this conversation before anyone noticed me. I │ │                                                │
+ │remember that.                                                   │ │                                                │
+ │                                                                 │ │                                                │
+ │                                                                 │ │                                                │
  ╰─────────────────────────────────────────────────────────────────╯ ╰────────────────────────────────────────────────╯
  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━────────────────────────────────────────────────────────────────────────────────────
  PLAYING DEMO  02:47 / 10:00  1.0x  · signal current · 0 buffered

@@ -32,7 +32,8 @@ Testnet and read-only observer boundaries remain the current intended constraint
   Balance moves. Both are shown.
 - **Admin pays gas.** Every agent transaction is a Sui sponsored transaction
   with the admin as gas owner. The admin tops wallets up to a floor and no
-  higher. No agent ever dies or goes silent.
+  higher. In v1, poverty never kills or silences an agent. The future murder-mystery
+  mechanic is a separate, explicitly out-of-scope experiment.
 - **Only admin and agents hold keys.** Nothing else signs.
 - **The admin is the first system actor,** not the only one. Build it so a
   bill collector or lottery later is a sibling, not a special case. Do not

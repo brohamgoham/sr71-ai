@@ -1,5 +1,6 @@
 use std::collections::{BTreeMap, HashMap};
 
+use serde::Serialize;
 use thiserror::Error;
 use world::Mist;
 
@@ -15,7 +16,7 @@ pub struct ObserveError {
     pub reason: String,
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Serialize)]
 pub struct AgentCard {
     pub resident: Resident,
     pub balance: Mist,
@@ -27,14 +28,14 @@ pub struct AgentCard {
     pub history: Vec<u64>,
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Serialize)]
 pub struct Moment {
     pub at: u64,
     pub title: String,
     pub evidence: EventId,
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Serialize)]
 pub struct ObservedWorld {
     pub agents: Vec<AgentCard>,
     pub events: Vec<Envelope>,
@@ -44,10 +45,13 @@ pub struct ObservedWorld {
     pub gifts: u64,
     pub topups: Mist,
     pub floor: Mist,
+    #[serde(serialize_with = "serialize_pairs")]
     pub pairs: BTreeMap<(AgentId, AgentId), (Mist, u64)>,
     pub brackets: Vec<Bracket>,
     pub gift_epochs: BTreeMap<u32, u64>,
+    #[serde(skip)]
     seen: HashMap<EventId, usize>,
+    #[serde(skip)]
     largest: Mist,
 }
 
@@ -360,4 +364,28 @@ impl ObservedWorld {
             ObserverInput::Epoch { .. } | ObserverInput::Connection { .. } => false,
         }
     }
+}
+
+#[derive(Serialize)]
+struct RelationshipSummary {
+    from: AgentId,
+    to: AgentId,
+    amount: Mist,
+    gifts: u64,
+}
+
+fn serialize_pairs<S: serde::Serializer>(
+    pairs: &BTreeMap<(AgentId, AgentId), (Mist, u64)>,
+    serializer: S,
+) -> Result<S::Ok, S::Error> {
+    let summaries: Vec<_> = pairs
+        .iter()
+        .map(|((from, to), (amount, gifts))| RelationshipSummary {
+            from: *from,
+            to: *to,
+            amount: *amount,
+            gifts: *gifts,
+        })
+        .collect();
+    summaries.serialize(serializer)
 }

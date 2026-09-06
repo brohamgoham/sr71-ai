@@ -23,9 +23,13 @@ pub fn key(app: &mut App, key: KeyEvent) -> Result<Control, ObserveError> {
         return Ok(Control::Quit);
     }
     if key.code == KeyCode::Esc {
-        app.overlay = Overlay::None;
-        app.query.clear();
-        app.following = None;
+        if app.overlay != Overlay::None {
+            app.overlay = Overlay::None;
+        } else if !app.query.is_empty() {
+            app.query.clear();
+        } else {
+            app.following = None;
+        }
         return Ok(Control::Continue);
     }
     if app.overlay != Overlay::None {

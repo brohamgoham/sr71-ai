@@ -116,7 +116,7 @@ pub fn resident(frame: &mut Frame<'_>, app: &App, theme: Theme, area: Rect) {
 }
 
 pub fn cast(frame: &mut Frame<'_>, app: &App, theme: Theme, area: Rect) {
-    let rows = Layout::vertical([Constraint::Min(8), Constraint::Length(8)])
+    let rows = Layout::vertical([Constraint::Min(8), Constraint::Length(11)])
         .spacing(1)
         .split(area);
     let available = usize::from(rows[0].height.saturating_sub(3));
@@ -160,12 +160,12 @@ pub fn cast(frame: &mut Frame<'_>, app: &App, theme: Theme, area: Rect) {
     let table = Table::new(
         table_rows,
         [
-            Constraint::Min(12),
-            Constraint::Length(13),
-            Constraint::Length(13),
-            Constraint::Length(9),
-            Constraint::Length(5),
-            Constraint::Length(9),
+            Constraint::Percentage(20),
+            Constraint::Percentage(17),
+            Constraint::Percentage(17),
+            Constraint::Percentage(13),
+            Constraint::Percentage(9),
+            Constraint::Percentage(24),
         ],
     )
     .header(

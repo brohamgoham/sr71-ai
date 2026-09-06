@@ -179,3 +179,12 @@ viewer to live truth. Phase 6 evaluates both behavior and watchability.
 The TUI lowers presentation and data-model risk; it does not prove model behavior,
 economic interest, or chain recovery. Each has its own acceptance test. WebGL,
 Unity or another client is a later renderer decision, not a dependency now.
+
+## Forward-compatible prompt composition
+
+The full world parser will accept optional class `prompt_lines = []`, validating
+nonblank strings and including them in the frozen birth prompt after class text.
+This supports future experiment-specific rules without embedding them in runtime
+code. The fixture viewer does not assemble model prompts; no murder instruction is
+present in the demo or the v1 default. Memory visibility remains separate from public
+observation, as detailed in the future murder brief.

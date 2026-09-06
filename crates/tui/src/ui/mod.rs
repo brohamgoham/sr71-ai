@@ -114,13 +114,12 @@ pub fn render(frame: &mut Frame<'_>, app: &App, theme: Theme) {
         Tab::Economy => panels::economy(frame, app, theme, rows[1]),
     }
     status(frame, app, theme, rows[2]);
-    frame.render_widget(
-        Paragraph::new(
-            "1/2/3 views  ↑↓ cast  f follow  ↵ inspect  space pause  r replay  ? keys  q quit",
-        )
-        .style(theme.ink(MUTED)),
-        rows[3],
-    );
+    let keys = if area.width < 100 {
+        "1/2/3 views  ↑↓ select  f follow  ↵ inspect  space pause  ? help  q quit"
+    } else {
+        "1/2/3 views  ↑↓ cast  f follow  ↵ inspect  space pause  r replay  ? keys  q quit"
+    };
+    frame.render_widget(Paragraph::new(keys).style(theme.ink(MUTED)), rows[3]);
     if app.overlay != Overlay::None {
         overlay(frame, app, theme);
     }

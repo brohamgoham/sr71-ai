@@ -35,9 +35,8 @@ in an explicit preflight smoke call before the first paid experiment. An HTTP
 success without valid tool output is not sufficient. Offline tests use Rig mock
 models; no CI test reads a live key or calls an actual model service.
 
-GPT access remains unconfirmed. No claim is made that a ChatGPT login supplies API
-credentials, that a particular model is available to the owner, or that the original
-example model's price/latency is known. Record the selected model and API usage;
+The owner will provide a GPT-5.4 mini API key. Verify actual API access, tool support
+and pricing at preflight; do not infer them from a subscription or model name. Record the selected model and API usage;
 never base the run budget on the original handoff's "cents per epoch" estimate.
 
 ## Turn state and scheduling

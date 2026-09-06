@@ -31,11 +31,12 @@ These documents cover all of **v1, Phases 0–6**. Back alleys, jobs, lotteries,
 Tauri, human players, and hosted deployment remain future work, without invented
 implementation commitments.
 
-Build order now includes **Phase 5A, a fixture-driven ratatui prototype, immediately
-after Phase 0**, then Phases 1–4, Phase 5B live integration, and Phase 6. The owner
+The owner authorized **Phase 5A, a fixture-driven ratatui prototype, with the minimum
+Rust scaffold first**. Complete the rest of Phase 0 before Phases 1–4, Phase 5B live
+integration, and Phase 6. The owner
 is the first consumer: test watchability before completing the backend.
 
-## Questions that do not block drafting
+## Implementation notes
 
 - The owner will provide a GPT-5.4 mini API key. Actual access is verified during
   Phase 4 preflight; no key is needed for the TUI prototype.

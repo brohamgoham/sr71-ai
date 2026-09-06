@@ -1,23 +1,51 @@
 # Handoff
 
-## Specification revision, 2026-09-06
+## TUI prototype built, 2026-09-06
 
-The owner reopened the architecture and prioritized personal enjoyment of watching,
-with ratatui as the first presentation layer. Read [the documentation index](README.md)
-and updated [roadmap](roadmap.md) before the original design-session notes below.
-All v1 phases now have draft specifications and implementation sequences. These are
-written proposals; no review acceptance, CLI setup, application code, tests or chain
-writes have been completed during this pass.
+The owner approved the revised v1 specs, will supply a GPT-5.4 mini API key, and
+asked to build the TUI first. Work is on `feat/square-viewer`. Commits through
+`aac1e34` arrived concurrently; this assistant issued no commit command and left final
+fixes uncommitted. Existing documents, roadmap item 8 and the new environment example
+were preserved.
 
-New direction: fixture-driven Watch/Cast/Economy viewer after Phase 0; bounded reactive
-agents; individual dispositions independent of wealth; reusable Square creation and
-bound admin capabilities; reply metadata and Square IDs in events; durable operation
-journals; private self-reported notes; source-backed moments and offline replay.
+Run `cargo run -p tui -- demo`. For an immediate gift scene, add `--at 135`.
+See [the root README](../README.md) for keys, scenarios and headless snapshots.
+The persistent DEMO label means authored fixture playback, not live agent behavior.
 
-Next action: review the concrete draft choices, then follow the Phase 0–1 plan,
-including Phase 5A's early viewer. Actual GPT model/API access remains unconfirmed.
-The original prompt set is preserved as the planned `design-session` world. The new
-default uses factual birth circumstances and separately authored dispositions.
+Built: two-crate Rust workspace, exact Mist units, shared lint policy, dependency
+policy, installed prek hooks; versioned fixture validation; pure serializable
+observer state; Watch/Cast/Economy; stable cast selection/follow; filtering; source
+inspection; private self-report/sealed-reference display; per-agent posting rates;
+pause, seek, moment navigation and replay; compact/no-color/ASCII-border layouts.
+Four fixtures cover a ten-minute story, silence, a 1,000-post burst and signal loss.
+The signal fixture tests presentation states, not a working RPC backfill protocol.
+
+Verification: 23 behavior/CLI/UI/unit tests; five reviewed text snapshots covering
+120×40, 100×30 and 80×24; fmt and all-target/all-feature clippy with warnings denied;
+cargo-deny advisory, source, license and ban checks. Dependency duplicates in syn
+and hashbrown are warnings from upstream dependency graphs, not advisory exceptions.
+PTY smoke exercised tabs, follow, pause, replay, help, resize and quit, confirming
+terminal flags and the alternate screen were restored. Stable Rust 1.97.1 was checked
+using installed Nix binaries; the default local Cargo/Clippy is nightly. rustup is
+not installed here, so rust-toolchain.toml is a pin for rustup-based environments,
+not a claim that this machine's global toolchain was changed.
+
+Murder evolution: see [the future brief](superpowers/specs/2026-09-06-murder-mystery-future.md).
+Retained identity, typed life state (Alive only), note visibility and posting-rate
+history are implemented observer hooks. Sealed fixture references contain no plaintext;
+no encryption, death transition, contract status field or commit/reveal/accuse API
+was added. Sponsorship is not anonymity, and future estates require a separate
+custody design. Back Alleys remains a prerequisite.
+
+Still pending: the owner's actual watchability feedback, full world TOML parser and
+prompt assembly, remaining Phase 0 Sui CLI/wallet/Move setup, all contract/chain/admin/
+agent execution, live observation and real run reports. The minimal scaffold was
+built ahead of the rest of Phase 0 to honor the explicit TUI-first request. Do not
+claim Phase 0 or Phase 5B complete. There have been no chain writes or model calls.
+
+Next: let the owner try the viewer, incorporate concrete viewing feedback, and
+finish Phase 0 before Move Phase 1. Specs no longer need approval already supplied
+by the owner. New murder mechanics still need a proper future protocol design.
 
 ## Original design-session handoff
 

@@ -359,3 +359,20 @@ fn thousand_event_burst_is_retained_and_replayable() -> TestResult {
     assert_eq!(app.feed().len(), 1000);
     Ok(())
 }
+
+#[test]
+fn projection_serializes_without_terminal_types_or_internal_indices() -> TestResult {
+    let mut app = App::new(fixture::story()?)?;
+    app.seek(167.0)?;
+    let json = serde_json::to_value(&app.world)?;
+    assert_eq!(json["pairs"][0]["amount"], "40000000000");
+    assert!(json.get("seen").is_none());
+    let original = serde_json::to_string(&app.world)?;
+    app.seek(0.0)?;
+    app.seek(167.0)?;
+    assert_eq!(original, serde_json::to_string(&app.world)?);
+    let mut invalid = fixture::story()?;
+    invalid.roster.clear();
+    assert!(App::new(invalid).is_err());
+    Ok(())
+}

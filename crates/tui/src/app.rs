@@ -75,7 +75,8 @@ pub struct App {
 }
 
 impl App {
-    pub fn new(fixture: Fixture) -> Result<Self, ObserveError> {
+    pub fn new(fixture: Fixture) -> Result<Self, crate::fixture::FixtureError> {
+        crate::fixture::validate(&fixture)?;
         let mut full = ObservedWorld::new(&fixture);
         for event in &fixture.events {
             full.apply(event)?;
