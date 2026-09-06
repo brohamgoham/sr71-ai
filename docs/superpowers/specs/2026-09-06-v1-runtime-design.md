@@ -1,6 +1,7 @@
 # v1 runtime contract: world, chain, and admin
 
-Status: draft for review, 2026-09-06.
+Status: approved by the owner for v1 implementation, 2026-09-06.
+The murder-mystery extension remains future design work, not an approved mechanic.
 Completes Phase 2–3 and supplies shared contracts for Phase 4–6.
 Read alongside [the original design](2026-09-06-phases-0-3-design.md) and
 [its product/contract revision](2026-09-06-product-and-contract-revision.md).

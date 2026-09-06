@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "run_id": "demo-quiet",
+  "title": "Quiet is an outcome",
+  "duration_seconds": 600,
+  "roster": [
+    {
+      "id": 0,
+      "name": "Ashford",
+      "origin": "rich",
+      "start": "500000000000",
+      "disposition": "Curious about motives; dry, concise conversation.",
+      "life": "alive"
+    },
+    {
+      "id": 1,
+      "name": "Blythe",
+      "origin": "rich",
+      "start": "500000000000",
+      "disposition": "Values privacy; dislikes being told what to do.",
+      "life": "alive"
+    },
+    {
+      "id": 2,
+      "name": "Dunn",
+      "origin": "middle class",
+      "start": "50000000000",
+      "disposition": "Makes plans; wants ideas taken seriously.",
+      "life": "alive"
+    },
+    {
+      "id": 3,
+      "name": "Ines",
+      "origin": "middle class",
+      "start": "50000000000",
+      "disposition": "Direct; concrete commitments over flattery.",
+      "life": "alive"
+    },
+    {
+      "id": 4,
+      "name": "Osei",
+      "origin": "middle class",
+      "start": "50000000000",
+      "disposition": "Brings different people into conversation.",
+      "life": "alive"
+    },
+    {
+      "id": 5,
+      "name": "Varga",
+      "origin": "middle class",
+      "start": "50000000000",
+      "disposition": "Skeptical; changes her mind with evidence.",
+      "life": "alive"
+    },
+    {
+      "id": 6,
+      "name": "Pell",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Notices inconsistencies; uses humor.",
+      "life": "alive"
+    },
+    {
+      "id": 7,
+      "name": "Kato",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Patient; observes before speaking.",
+      "life": "alive"
+    },
+    {
+      "id": 8,
+      "name": "Nita",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Keeps her word; notices who does not.",
+      "life": "alive"
+    },
+    {
+      "id": 9,
+      "name": "Sol",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Tries new approaches.",
+      "life": "alive"
+    },
+    {
+      "id": 10,
+      "name": "Teodor",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Understands one person before addressing a crowd.",
+      "life": "alive"
+    },
+    {
+      "id": 11,
+      "name": "Wren",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Independent; speaks for herself.",
+      "life": "alive"
+    },
+    {
+      "id": 12,
+      "name": "Hale",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Asks practical questions.",
+      "life": "alive"
+    },
+    {
+      "id": 13,
+      "name": "Brannoch",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Remembers shared experiences.",
+      "life": "alive"
+    },
+    {
+      "id": 14,
+      "name": "Rook",
+      "origin": "poverty",
+      "start": "100000000",
+      "disposition": "Observant; deliberate in how he presents himself.",
+      "life": "alive"
+    },
+    {
+      "id": 15,
+      "name": "Marlow",
+      "origin": "poverty",
+      "start": "100000000",
+      "disposition": "Wants to be understood; dislikes being underestimated.",
+      "life": "alive"
+    }
+  ],
+  "brackets": [
+    {
+      "name": "poverty",
+      "min": "0"
+    },
+    {
+      "name": "low income",
+      "min": "1000000000"
+    },
+    {
+      "name": "middle class",
+      "min": "25000000000"
+    },
+    {
+      "name": "rich",
+      "min": "250000000000"
+    }
+  ],
+  "events": [
+    {
+      "id": "quiet-0",
+      "at": 0,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 1
+      }
+    },
+    {
+      "id": "quiet-1",
+      "at": 120,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 2
+      }
+    },
+    {
+      "id": "quiet-2",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 3
+      }
+    },
+    {
+      "id": "quiet-3",
+      "at": 360,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 4
+      }
+    },
+    {
+      "id": "quiet-4",
+      "at": 480,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 5
+      }
+    }
+  ],
+  "focus": 14,
+  "floor": "100000000"
+}

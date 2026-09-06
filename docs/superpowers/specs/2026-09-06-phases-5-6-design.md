@@ -1,6 +1,7 @@
 # Phases 5A, 5B and 6: something worth watching
 
-Status: draft for review, 2026-09-06.
+Status: approved by the owner for v1 implementation, 2026-09-06.
+The murder-mystery extension remains future design work, not an approved mechanic.
 Depends on the [product revision](2026-09-06-product-and-contract-revision.md) and
 [runtime contract](2026-09-06-v1-runtime-design.md).
 

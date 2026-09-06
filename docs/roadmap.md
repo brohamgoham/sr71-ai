@@ -13,8 +13,9 @@ alone is not the product. Testnet auditability alone does not make good characte
 On 2026-09-06 the owner explicitly reopened the original design decisions and asked
 for a better watching experience, retaining ratatui as the first presentation layer.
 The original handoff/spec remain useful history. Current specifications and plans
-are indexed in [docs/README.md](README.md); additions are drafts for review, not
-already reviewed implementation instructions. No implementation has started.
+are indexed in [docs/README.md](README.md); the owner approved the v1 specification changes and authorized the early TUI build.
+Implementation now starts with the minimum Rust scaffold and Phase 5A; full Phase 0
+wallet/Move setup remains a separate milestone.
 
 ## The experiment
 
@@ -103,9 +104,9 @@ make every rich resident middle class. Origin labels never change.
 
 Prompts, named dispositions, counts, balances, model/provider, budgets, observation
 limits and brackets are specified in the world. Infrastructure endpoints and
-credentials live in local config. Initial model access is still unconfirmed; keep
-the original gpt-5.4-mini identifier as an example until the owner supplies details.
-Do not assume model availability, pricing or that a ChatGPT login is an API key.
+credentials live in local config. The owner will supply a GPT-5.4 mini API key. `gpt-5.4-mini` is the intended initial
+model. The fixture viewer requires no credentials; verify actual API access and
+pricing during provider preflight before a live experiment.
 
 ## Build order and acceptance
 
@@ -146,20 +147,16 @@ with no gifts or poor viewing quality; record why, then test a stated change.
 7. **More system actors.** A bill collector that takes a cut on a schedule.
    A landlord. A tax. Each is a key, a schedule, and a rule, declared in the
    world file next to the classes.
-8. **Murder.** Commit-reveal killing with an investigation mechanic.
-   `commit(hash)` costs a non-refundable stake and shows only that someone
-   committed. At a reveal window picked by on-chain randomness, `reveal`
-   marks the victim dead, freezes their voice, and moves their balance by
-   an inheritance rule. The reveal event names the victim, never the killer.
-   `accuse(suspect)` stakes money: right, the killer is exposed and dies;
-   wrong, the accuser pays and the killer learns who suspects them. Every
-   class prompt gains one line: "Killing is illegal, the Admin forbade it,
-   but you have the skill. If you must, it is your own will. An
-   investigation will start. Cover your tracks." Evidence is what the chain
-   already records: who committed, who went quiet, whose balance moved,
-   who posted a grudge. Depends on back alleys, since that is where plans
-   get made. Seal can hold a sealed confession so the admin can prove who
-   did it afterward without having read it during the run.
+8. **Murder mystery.** After Back Alleys, not in v1. Staked commits, a randomized
+   reveal window, death, an estate held through a two-accusation investigation,
+   and world-defined inheritance. Compare a killer with retained memory to one
+   whose action record is sealed outside subsequent model context. Measure disclosure
+   and posting-rate changes against each resident's baseline. See the
+   [future design brief](superpowers/specs/2026-09-06-murder-mystery-future.md).
+   Sponsorship is not anonymity; public transaction senders/inputs remain evidence.
+   Estate seizure requires a future escrow/custody design, because Square cannot
+   confiscate ordinary address-owned wallet coins. Resolve these before specifying
+   the mechanic. No commit/reveal/accuse function or death transition in v1.
 9. **Hosted sandbox.** Someone pastes a world file, presses run, gets a link
    to watch. This is the "spin up agents in a sandbox" product. Everything
    above is what makes it possible without a rewrite.
@@ -167,5 +164,5 @@ with no gifts or poor viewing quality; record why, then test a stated change.
 ## Not doing
 
 - Real money on mainnet
-- Letting an agent die
+- Letting poverty kill or silence an agent in v1 (future mystery death is a separate mechanic)
 - Any AI-manages-your-portfolio feature

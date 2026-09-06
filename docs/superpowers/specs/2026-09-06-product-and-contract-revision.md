@@ -1,6 +1,7 @@
 # Product direction and Phase 0–1 revisions
 
-Status: draft for review, 2026-09-06.
+Status: approved by the owner for v1 implementation, 2026-09-06.
+The murder-mystery extension remains future design work, not an approved mechanic.
 Authority: the owner reopened all earlier design decisions and explicitly chose
 ratatui as the first presentation layer, with personal enjoyment as a primary goal.
 This document supersedes conflicting details in the original Phase 0–3 draft.

@@ -1,6 +1,7 @@
 # Phase 4: autonomous residents
 
-Status: draft for review, 2026-09-06.
+Status: approved by the owner for v1 implementation, 2026-09-06.
+The murder-mystery extension remains future design work, not an approved mechanic.
 Depends on the [runtime contract](2026-09-06-v1-runtime-design.md) and
 [product revision](2026-09-06-product-and-contract-revision.md).
 

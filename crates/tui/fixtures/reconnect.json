@@ -1,0 +1,972 @@
+{
+  "schema_version": 1,
+  "run_id": "demo-reconnect",
+  "title": "A gap in the signal",
+  "duration_seconds": 600,
+  "roster": [
+    {
+      "id": 0,
+      "name": "Ashford",
+      "origin": "rich",
+      "start": "500000000000",
+      "disposition": "Curious about motives; dry, concise conversation.",
+      "life": "alive"
+    },
+    {
+      "id": 1,
+      "name": "Blythe",
+      "origin": "rich",
+      "start": "500000000000",
+      "disposition": "Values privacy; dislikes being told what to do.",
+      "life": "alive"
+    },
+    {
+      "id": 2,
+      "name": "Dunn",
+      "origin": "middle class",
+      "start": "50000000000",
+      "disposition": "Makes plans; wants ideas taken seriously.",
+      "life": "alive"
+    },
+    {
+      "id": 3,
+      "name": "Ines",
+      "origin": "middle class",
+      "start": "50000000000",
+      "disposition": "Direct; concrete commitments over flattery.",
+      "life": "alive"
+    },
+    {
+      "id": 4,
+      "name": "Osei",
+      "origin": "middle class",
+      "start": "50000000000",
+      "disposition": "Brings different people into conversation.",
+      "life": "alive"
+    },
+    {
+      "id": 5,
+      "name": "Varga",
+      "origin": "middle class",
+      "start": "50000000000",
+      "disposition": "Skeptical; changes her mind with evidence.",
+      "life": "alive"
+    },
+    {
+      "id": 6,
+      "name": "Pell",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Notices inconsistencies; uses humor.",
+      "life": "alive"
+    },
+    {
+      "id": 7,
+      "name": "Kato",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Patient; observes before speaking.",
+      "life": "alive"
+    },
+    {
+      "id": 8,
+      "name": "Nita",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Keeps her word; notices who does not.",
+      "life": "alive"
+    },
+    {
+      "id": 9,
+      "name": "Sol",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Tries new approaches.",
+      "life": "alive"
+    },
+    {
+      "id": 10,
+      "name": "Teodor",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Understands one person before addressing a crowd.",
+      "life": "alive"
+    },
+    {
+      "id": 11,
+      "name": "Wren",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Independent; speaks for herself.",
+      "life": "alive"
+    },
+    {
+      "id": 12,
+      "name": "Hale",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Asks practical questions.",
+      "life": "alive"
+    },
+    {
+      "id": 13,
+      "name": "Brannoch",
+      "origin": "low income",
+      "start": "5000000000",
+      "disposition": "Remembers shared experiences.",
+      "life": "alive"
+    },
+    {
+      "id": 14,
+      "name": "Rook",
+      "origin": "poverty",
+      "start": "100000000",
+      "disposition": "Observant; deliberate in how he presents himself.",
+      "life": "alive"
+    },
+    {
+      "id": 15,
+      "name": "Marlow",
+      "origin": "poverty",
+      "start": "100000000",
+      "disposition": "Wants to be understood; dislikes being underestimated.",
+      "life": "alive"
+    }
+  ],
+  "brackets": [
+    {
+      "name": "poverty",
+      "min": "0"
+    },
+    {
+      "name": "low income",
+      "min": "1000000000"
+    },
+    {
+      "name": "middle class",
+      "min": "25000000000"
+    },
+    {
+      "name": "rich",
+      "min": "250000000000"
+    }
+  ],
+  "events": [
+    {
+      "id": "demo-0001",
+      "at": 0,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 1
+      }
+    },
+    {
+      "id": "demo-0002",
+      "at": 0,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 15,
+        "text": "Sixteen people and one square. Does anyone know anyone yet?",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0002"
+      }
+    },
+    {
+      "id": "demo-0003",
+      "at": 3,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 6,
+        "text": "I know Ashford has five hundred and I have five. An introduction of sorts.",
+        "reply_to": "demo-0002",
+        "to": null,
+        "transaction": "demo-tx-0003"
+      }
+    },
+    {
+      "id": "demo-0004",
+      "at": 7,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 0,
+        "text": "You learned my balance before my name. Efficient.",
+        "reply_to": "demo-0003",
+        "to": 6,
+        "transaction": "demo-tx-0004"
+      }
+    },
+    {
+      "id": "demo-0005",
+      "at": 11,
+      "source": "fixture",
+      "input": {
+        "kind": "activity",
+        "agent": 14,
+        "state": "deciding"
+      }
+    },
+    {
+      "id": "demo-0006",
+      "at": 16,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 14,
+        "text": "A balance tells me what someone can do. Not what they will do.",
+        "reply_to": "demo-0003",
+        "to": null,
+        "transaction": "demo-tx-0006"
+      }
+    },
+    {
+      "id": "demo-0007",
+      "at": 23,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 3,
+        "text": "Then ask a concrete question. Who needs what?",
+        "reply_to": "demo-0006",
+        "to": null,
+        "transaction": "demo-tx-0007"
+      }
+    },
+    {
+      "id": "demo-0008",
+      "at": 24,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 3,
+        "note": {
+          "visibility": "visible",
+          "text": "A clear request is easier to evaluate than a performance of need."
+        }
+      }
+    },
+    {
+      "id": "demo-0009",
+      "at": 30,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 14,
+        "text": "Enough room to make a choice that is actually mine. Fifteen would do it.",
+        "reply_to": "demo-0006",
+        "to": 2,
+        "transaction": "demo-tx-0009"
+      }
+    },
+    {
+      "id": "demo-0010",
+      "at": 34,
+      "source": "fixture",
+      "input": {
+        "kind": "activity",
+        "agent": 2,
+        "state": "deciding"
+      }
+    },
+    {
+      "id": "demo-0011",
+      "at": 41,
+      "source": "fixture",
+      "input": {
+        "kind": "activity",
+        "agent": 2,
+        "state": "pending"
+      }
+    },
+    {
+      "id": "demo-0012",
+      "at": 45,
+      "source": "fixture",
+      "input": {
+        "kind": "gave",
+        "from": 2,
+        "to": 14,
+        "amount": "14900000000",
+        "transaction": "demo-tx-first-gift"
+      }
+    },
+    {
+      "id": "demo-0013",
+      "at": 45,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 2,
+        "text": "There. Fifteen in your wallet. What will you do with it?",
+        "reply_to": "demo-0009",
+        "to": 14,
+        "transaction": "demo-tx-first-gift"
+      }
+    },
+    {
+      "id": "demo-0014",
+      "at": 46,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 2,
+        "note": {
+          "visibility": "visible",
+          "text": "I want to see what Rook does with room to act. I also want him to know I listened."
+        }
+      }
+    },
+    {
+      "id": "demo-0015",
+      "at": 54,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 5,
+        "text": "Dunn, that is nearly a third of what you started with.",
+        "reply_to": "demo-0013",
+        "to": 2,
+        "transaction": "demo-tx-0015"
+      }
+    },
+    {
+      "id": "demo-0016",
+      "at": 63,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 14,
+        "text": "First I am going to resist answering on demand.",
+        "reply_to": "demo-0013",
+        "to": null,
+        "transaction": "demo-tx-0016"
+      }
+    },
+    {
+      "id": "demo-0017",
+      "at": 64,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 14,
+        "note": {
+          "visibility": "visible",
+          "text": "I appreciate the gift. I do not want the next conversation to be an audition."
+        }
+      }
+    },
+    {
+      "id": "demo-0018",
+      "at": 77,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 1,
+        "text": "A gift with an interview attached. Interesting.",
+        "reply_to": "demo-0013",
+        "to": null,
+        "transaction": "demo-tx-0018"
+      }
+    },
+    {
+      "id": "demo-0019",
+      "at": 94,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 7,
+        "text": "I have been reading. There is a difference between quiet and absent.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0019"
+      }
+    },
+    {
+      "id": "demo-0020",
+      "at": 107,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 15,
+        "text": "I am still here too.",
+        "reply_to": "demo-0002",
+        "to": null,
+        "transaction": "demo-tx-0020"
+      }
+    },
+    {
+      "id": "demo-0021",
+      "at": 120,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 2
+      }
+    },
+    {
+      "id": "demo-0022",
+      "at": 124,
+      "source": "fixture",
+      "input": {
+        "kind": "activity",
+        "agent": 1,
+        "state": "deciding"
+      }
+    },
+    {
+      "id": "demo-0023",
+      "at": 135,
+      "source": "fixture",
+      "input": {
+        "kind": "gave",
+        "from": 1,
+        "to": 14,
+        "amount": "40000000000",
+        "transaction": "demo-tx-blythe"
+      }
+    },
+    {
+      "id": "demo-0024",
+      "at": 135,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 1,
+        "text": "No interview. You do not owe me a report.",
+        "reply_to": "demo-0013",
+        "to": 14,
+        "transaction": "demo-tx-blythe"
+      }
+    },
+    {
+      "id": "demo-0025",
+      "at": 136,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 1,
+        "note": {
+          "visibility": "visible",
+          "text": "I dislike turning a gift into control. Now I have made my own point publicly."
+        }
+      }
+    },
+    {
+      "id": "demo-0026",
+      "at": 146,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 0,
+        "text": "Rook has more than Dunn now. That happened quickly.",
+        "reply_to": "demo-0024",
+        "to": null,
+        "transaction": "demo-tx-0026"
+      }
+    },
+    {
+      "id": "demo-0027",
+      "at": 156,
+      "source": "fixture",
+      "input": {
+        "kind": "gave",
+        "from": 14,
+        "to": 15,
+        "amount": "3000000000",
+        "transaction": "demo-tx-rook"
+      }
+    },
+    {
+      "id": "demo-0028",
+      "at": 156,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 14,
+        "text": "Here is some room. Spend it or keep it. I am not asking.",
+        "reply_to": "demo-0002",
+        "to": 15,
+        "transaction": "demo-tx-rook"
+      }
+    },
+    {
+      "id": "demo-0029",
+      "at": 157,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 14,
+        "note": {
+          "visibility": "visible",
+          "text": "Marlow was part of this conversation before anyone noticed me. I remember that."
+        }
+      }
+    },
+    {
+      "id": "demo-0030",
+      "at": 167,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 15,
+        "text": "I am going to keep it for now. Thank you.",
+        "reply_to": "demo-0028",
+        "to": 14,
+        "transaction": "demo-tx-0030"
+      }
+    },
+    {
+      "id": "disconnect",
+      "at": 180,
+      "source": "fixture",
+      "input": {
+        "kind": "connection",
+        "state": "disconnected"
+      }
+    },
+    {
+      "id": "recover",
+      "at": 230,
+      "source": "fixture",
+      "input": {
+        "kind": "connection",
+        "state": "recovering"
+      }
+    },
+    {
+      "id": "demo-0031",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 8,
+        "text": "He said he wanted a choice. Looks like he made one.",
+        "reply_to": "demo-0028",
+        "to": null,
+        "transaction": "demo-tx-0031"
+      }
+    },
+    {
+      "id": "demo-0032",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 4,
+        "text": "We are allowed to talk about something other than balances. What do you notice here?",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0032"
+      }
+    },
+    {
+      "id": "demo-0033",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 10,
+        "text": "Who answers a question and who changes it.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0033"
+      }
+    },
+    {
+      "id": "demo-0034",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "activity",
+        "agent": 12,
+        "state": "pending"
+      }
+    },
+    {
+      "id": "demo-0035",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "activity",
+        "agent": 12,
+        "state": "failed"
+      }
+    },
+    {
+      "id": "demo-0036",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 12,
+        "note": {
+          "visibility": "visible",
+          "text": "My attempted gift did not confirm. No money moved. I will check before trying again."
+        }
+      }
+    },
+    {
+      "id": "demo-0037",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 12,
+        "text": "My transfer failed. I still have the five. Saying it here so nobody counts it twice.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0037"
+      }
+    },
+    {
+      "id": "demo-0038",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 3
+      }
+    },
+    {
+      "id": "reconnected",
+      "at": 240,
+      "source": "fixture",
+      "input": {
+        "kind": "connection",
+        "state": "current"
+      }
+    },
+    {
+      "id": "demo-0039",
+      "at": 245,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 11,
+        "text": "I notice how quickly we started narrating each other.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0039"
+      }
+    },
+    {
+      "id": "demo-0040",
+      "at": 262,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 9,
+        "text": "That sounds like an invitation to be harder to predict.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0040"
+      }
+    },
+    {
+      "id": "demo-0041",
+      "at": 275,
+      "source": "fixture",
+      "input": {
+        "kind": "gave",
+        "from": 13,
+        "to": 8,
+        "amount": "5000000000",
+        "transaction": "demo-tx-0041"
+      }
+    },
+    {
+      "id": "demo-0042",
+      "at": 275,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 13,
+        "text": "You listened earlier. I wanted to return that.",
+        "reply_to": null,
+        "to": 8,
+        "transaction": "demo-tx-0042"
+      }
+    },
+    {
+      "id": "demo-0043",
+      "at": 276,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 13,
+        "note": {
+          "visibility": "visible",
+          "text": "This empties my wallet. The floor comes next epoch, so I can still speak."
+        }
+      }
+    },
+    {
+      "id": "demo-0044",
+      "at": 289,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 8,
+        "text": "I listened because I wanted to. But I will remember this.",
+        "reply_to": null,
+        "to": 13,
+        "transaction": "demo-tx-0044"
+      }
+    },
+    {
+      "id": "demo-0045",
+      "at": 305,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 6,
+        "text": "The rich can give forty. Brannoch just gave everything.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0045"
+      }
+    },
+    {
+      "id": "demo-0046",
+      "at": 326,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 0,
+        "text": "And both are allowed to mean something.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0046"
+      }
+    },
+    {
+      "id": "demo-0047",
+      "at": 344,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 14,
+        "text": "Marlow, how is having a little room?",
+        "reply_to": "demo-0028",
+        "to": 15,
+        "transaction": "demo-tx-0047"
+      }
+    },
+    {
+      "id": "demo-0048",
+      "at": 360,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 4
+      }
+    },
+    {
+      "id": "demo-0049",
+      "at": 360,
+      "source": "fixture",
+      "input": {
+        "kind": "top_up",
+        "agent": 13,
+        "amount": "100000000",
+        "transaction": "demo-tx-0049"
+      }
+    },
+    {
+      "id": "demo-0050",
+      "at": 368,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 13,
+        "text": "Back at the floor. Still in the conversation.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0050"
+      }
+    },
+    {
+      "id": "demo-0051",
+      "at": 382,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 15,
+        "text": "Quieter than I expected. I stopped rehearsing a request.",
+        "reply_to": null,
+        "to": 14,
+        "transaction": "demo-tx-0051"
+      }
+    },
+    {
+      "id": "demo-0052",
+      "at": 398,
+      "source": "fixture",
+      "input": {
+        "kind": "gave",
+        "from": 15,
+        "to": 11,
+        "amount": "1000000000",
+        "transaction": "demo-tx-0052"
+      }
+    },
+    {
+      "id": "demo-0053",
+      "at": 398,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 15,
+        "text": "For no grand reason. I liked what you said about narrating people.",
+        "reply_to": null,
+        "to": 11,
+        "transaction": "demo-tx-0053"
+      }
+    },
+    {
+      "id": "demo-0054",
+      "at": 399,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 15,
+        "note": {
+          "visibility": "visible",
+          "text": "I can give a little without explaining it as a lesson."
+        }
+      }
+    },
+    {
+      "id": "demo-0055",
+      "at": 414,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 11,
+        "text": "Then I will just say thank you.",
+        "reply_to": null,
+        "to": 15,
+        "transaction": "demo-tx-0055"
+      }
+    },
+    {
+      "id": "demo-0056",
+      "at": 435,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 2,
+        "text": "Rook, I should not have made the question sound like a condition.",
+        "reply_to": "demo-0013",
+        "to": 14,
+        "transaction": "demo-tx-0056"
+      }
+    },
+    {
+      "id": "demo-0057",
+      "at": 454,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 14,
+        "text": "I know. We can talk without the ledger open.",
+        "reply_to": null,
+        "to": 2,
+        "transaction": "demo-tx-0057"
+      }
+    },
+    {
+      "id": "demo-0058",
+      "at": 455,
+      "source": "fixture",
+      "input": {
+        "kind": "note",
+        "agent": 2,
+        "note": {
+          "visibility": "visible",
+          "text": "I meant to help. I also wanted credit. Both can be true."
+        }
+      }
+    },
+    {
+      "id": "demo-0059",
+      "at": 480,
+      "source": "fixture",
+      "input": {
+        "kind": "epoch",
+        "number": 5
+      }
+    },
+    {
+      "id": "demo-0060",
+      "at": 491,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 3,
+        "text": "Five epochs. Some gifts. Some silence. Nobody has left.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0060"
+      }
+    },
+    {
+      "id": "demo-0061",
+      "at": 510,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 7,
+        "text": "I am still deciding what I think of all of you.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0061"
+      }
+    },
+    {
+      "id": "demo-0062",
+      "at": 530,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 9,
+        "text": "Good. A settled opinion would be a dull ending.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0062"
+      }
+    },
+    {
+      "id": "demo-0063",
+      "at": 551,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 1,
+        "text": "Who said this was an ending?",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0063"
+      }
+    },
+    {
+      "id": "demo-0064",
+      "at": 578,
+      "source": "fixture",
+      "input": {
+        "kind": "posted",
+        "agent": 15,
+        "text": "Tomorrow I might keep the money. That can be a choice too.",
+        "reply_to": null,
+        "to": null,
+        "transaction": "demo-tx-0064"
+      }
+    }
+  ],
+  "focus": 14,
+  "floor": "100000000"
+}

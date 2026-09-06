@@ -9,7 +9,9 @@ use thiserror::Error;
 pub struct Mist(u64);
 
 #[derive(Debug, Error)]
-#[error("cannot parse SUI amount {input:?}: {reason}; use a nonnegative decimal with up to 9 places")]
+#[error(
+    "cannot parse SUI amount {input:?}: {reason}; use a nonnegative decimal with up to 9 places"
+)]
 pub struct AmountError {
     input: String,
     reason: &'static str,
@@ -40,12 +42,16 @@ impl FromStr for Mist {
     type Err = AmountError;
 
     fn from_str(input: &str) -> Result<Self, Self::Err> {
-        let fail = |reason| AmountError { input: input.to_owned(), reason };
+        let fail = |reason| AmountError {
+            input: input.to_owned(),
+            reason,
+        };
         let (whole, fraction) = input.split_once('.').unwrap_or((input, ""));
         if whole.is_empty() || !whole.bytes().all(|b| b.is_ascii_digit()) {
             return Err(fail("invalid whole part"));
         }
-        if fraction.len() > 9 || !fraction.bytes().all(|b| b.is_ascii_digit())
+        if fraction.len() > 9
+            || !fraction.bytes().all(|b| b.is_ascii_digit())
             || (input.contains('.') && fraction.is_empty())
         {
             return Err(fail("invalid fractional part"));
@@ -58,8 +64,11 @@ impl FromStr for Mist {
                 fractional += u64::from(digit - b'0');
             }
         }
-        whole.checked_mul(Self::PER_SUI).and_then(|value| value.checked_add(fractional))
-            .map(Self).ok_or_else(|| fail("amount overflow"))
+        whole
+            .checked_mul(Self::PER_SUI)
+            .and_then(|value| value.checked_add(fractional))
+            .map(Self)
+            .ok_or_else(|| fail("amount overflow"))
     }
 }
 
@@ -67,7 +76,12 @@ impl fmt::Display for Mist {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let fraction = format!("{:09}", self.0 % Self::PER_SUI);
         let fraction = fraction.trim_end_matches('0');
-        write!(f, "{}.{}", self.0 / Self::PER_SUI, if fraction.is_empty() { "0" } else { fraction })
+        write!(
+            f,
+            "{}.{}",
+            self.0 / Self::PER_SUI,
+            if fraction.is_empty() { "0" } else { fraction }
+        )
     }
 }
 
@@ -75,7 +89,12 @@ impl TryFrom<String> for Mist {
     type Error = String;
 
     fn try_from(input: String) -> Result<Self, Self::Error> {
-        input.parse::<u64>().map(Self)
+        if input.is_empty() || !input.bytes().all(|b| b.is_ascii_digit()) {
+            return Err(format!("invalid mist {input:?}; use a u64 decimal string"));
+        }
+        input
+            .parse::<u64>()
+            .map(Self)
             .map_err(|_| format!("invalid mist {input:?}; use a u64 decimal string"))
     }
 }
@@ -95,8 +114,19 @@ mod tests {
         assert_eq!("0.1".parse::<Mist>()?.value(), 100_000_000);
         assert_eq!("0.000000001".parse::<Mist>()?.value(), 1);
         assert_eq!("18446744073.709551615".parse::<Mist>()?.value(), u64::MAX);
-        for value in ["", "-1", "+1", "1e2", "1.", ".1", "1.0000000000", "1.x",
-            "18446744073.709551616", "18446744074", "999999999999999999999"] {
+        for value in [
+            "",
+            "-1",
+            "+1",
+            "1e2",
+            "1.",
+            ".1",
+            "1.0000000000",
+            "1.x",
+            "18446744073.709551616",
+            "18446744074",
+            "999999999999999999999",
+        ] {
             assert!(value.parse::<Mist>().is_err(), "{value}");
         }
         assert_eq!(Mist::new(100_000_000).to_string(), "0.1");
